@@ -1,5 +1,5 @@
 <!-- 
-Formulario equipo 3: Time revolution para STEAM
+Formulario Juego: Time revolution para STEAM
 Código realizado por:
 Diego Alejandro Juárez Ruiz - A01379566
 Roberto Valdez Jasso - A01746863 
@@ -67,39 +67,81 @@ Ultima modificación: 09/03/2021
                         <select class="form-select" id="generousuario" aria-label="Genero del usuario"
                             name="generousuario" required>
                             <option selected disabled>Seleccionar</option>
-                            <option value="1">Femenino</option>
-                            <option value="2">Masculino</option>
-                            <option value="3">No aplica</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="No aplica">No aplica</option>
                         </select>
                     </div>
                 </div>
                 </br>
                 <div class="row">
                     <div class="col">
-                        <label>Escolaridad</label>
-                        <input type="text" class="form-control"
-                            placeholder="Ingrese escolaridad ej: Secundaria, Preparatoria o No aplica"
-                            id="escolaridadusuario" name="escolaridadusuario">
+                        <label for="escolaridadusuario">Escolaridad</label>
+                        </br>
+                        <select class="form-select" id="escolaridadusuario" aria-label="Escolaridad de estudios" name="escolaridadusuario">
+                            <option selected>Seleccionar</option>
+                            <option value="Primaria">Primaria</option>
+                            <option value="Secundaria">Secundaria</option>
+                            <option value="Preparatoria">Preparatoria</option>
+                            <option value="Universidad">Universidad</option>
+                            <option value="No aplica">No aplica</option>
+                        </select>
                     </div>
                     <div class="col">
                         <label for="gradousuario">Grado escolar</label>
                         </br>
                         <select class="form-select" id="gradousuario" aria-label="Grado de estudios">
                             <option selected>Seleccionar</option>
-                            <option value="1">Primero 1°</option>
-                            <option value="2">Segundo 2°</option>
-                            <option value="3">Tercero 3°</option>
-                            <option value="4">No aplica</option>
+                            <option value="Primero">Primero 1°</option>
+                            <option value="Segundo">Segundo 2°</option>
+                            <option value="Tercero">Tercero 3°</option>
+                            <option value="No aplica">No aplica</option>
                         </select>
                     </div>
                 </div>
                 </br>
                 <div class="row">
                     <div class="col">
-                        <label>Estado de la Republica</label>
-                        <input type="text" class="form-control" placeholder="Ingrese el estado del la Republica*"
-                            id="estadousuario" name="estadousuario">
-                    </div>
+                        <label for="estadousuario">Estado de la Republica</label>
+                        </br>
+                        <select class="form-select" id="estadousuario" aria-label="Estado de Mexico" name="estadousuario">
+                        <option selected>Seleccionar</option>
+                        <option value="Aguascalientes">Aguascalientes</option>
+                        <option value="Baja California Norte">Baja California Norte</option>
+                        <option value="Baja California Sur">Baja California Sur</option>
+                        <option value="Campeche">Campeche</option>
+                        <option value="Chiapas">Chiapas</option>
+                        <option value="Chihuahua">Chihuahua</option>
+                        <option value="Ciudad de Mexico">Ciudad de México</option>
+                        <option value="Coahuila">Coahuila</option>
+                        <option value="Colima">Colima</option>
+                        <option value="Durango">Durango</option>
+                        <option value="Estado de Mexico">Estado de México</option>
+                        <option value="Guanajuato">Guanajuato</option>
+                        <option value="Guerrero">Guerrero</option>
+                        <option value="Hidalgo">Hidalgo</option>
+                        <option value="Jalisco">Jalisco</option>
+                        <option value="Michoacan">Michoacán</option>
+                        <option value="Morelos">Morelos</option>
+                        <option value="Nayarit">Nayarit</option>
+                        <option value="Nuevo Leon">Nuevo Leon</option>
+                        <option value="Oaxaca">Oaxaca</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Queretaro">Querétaro</option>
+                        <option value="Quintana Roo">Quintana Roo</option>
+                        <option value="San Luis Potosi">San Luis Potosi</option>
+                        <option value="Sinaloa">Sinaloa</option>
+                        <option value="Sonora">Sonora</option>
+                        <option value="Tabasco">Tabasco</option>
+                        <option value="Tamaulipas">Tamaulipas</option>
+                        <option value="Tlaxcala">Tlaxcala</option>
+                        <option value="Veracruz">Veracruz</option>
+                        <option value="Yucatan">Yucatan</option>
+                        <option value="Zacatecas">Zacatecas</option>
+                        <option value="No aplica">No aplica</option>
+                    </select>
+                </div>
+
                     <div class="col">
                         <label for="areausuario">Área de estudios interesado:</label>
                         </br>
@@ -137,7 +179,7 @@ Ultima modificación: 09/03/2021
         </br>
         </br>
         </br>
-</div>
+    </div>
 <footer>
     <p>Conoce a STEAM en su <a href="https://movimientosteam.org/">pagina web</a> </p>
 </footer>
