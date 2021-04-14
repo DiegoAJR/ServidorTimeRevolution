@@ -1,7 +1,20 @@
 // Traer el modelo de la tabla usuario
-const Formulario_Estudiante = require("../models/Jugador");
+const Formulario_Estudiante = require("../models/Formulario_Estudiante");
 const path = require("path");
 const { type } = require("os");
+
+exports.getAgregarUsuario = (req,res)=>{
+    let datos0 = req.body.datosJSON;
+    let datos = JSON.parse(datos0);
+
+    Jugador.create({
+        Usuario: datos.usuario,
+        Password: datos.password,
+        HoraInicio: datos.horaInicio
+    }).then(resultado => console.log("Registro exitoso"))
+      .catch(error => console.log(error));
+    res.send("Registrado");
+};
 
 exports.postAgregarUsuario = (req,res)=>{
     let datos0 = req.body.datosJSON;
@@ -16,7 +29,7 @@ exports.postAgregarUsuario = (req,res)=>{
     res.send("Registrado");
 };
 
-exports.postActualizarUsuario = (req,res) => {
+exports.getConfirmacion = (req,res) => {
     console.log(req);
     let datos0 = req.body.datosJSON;
     let datos = JSON.parse(datos0);

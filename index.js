@@ -8,7 +8,7 @@ const express = require('express');
 // Traer la conexion de la base de datos
 const sequelize = require("./util/database");
 // Traer las rutas
-const usuarioRoutes = require("./routes/usuario");
+const estudianteRoutes = require("./Routes/Formulario_Estudiante");
 
 // Crear el servidor
 const app = express();
@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 // Middleware para configurar la recepcion de formularios
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.use("/Jugador",jugadorRoutes);
+app.use("/estudiante", estudianteRoutes);
 
 let puerto = 8080;
 

@@ -4,7 +4,7 @@ const sequelize = require("../util/database");
 //Definicion del modelo
 
 const Formulario_Estudiante = sequelize.define("Formulario_Estudiante",{
-    ID_formulario: {
+    idFormulario: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
@@ -12,42 +12,42 @@ const Formulario_Estudiante = sequelize.define("Formulario_Estudiante",{
     },
     nickname: {
         type: Sequelize.STRING(50),
-        allowNull: false,
+        allowNull: false
     },
     fecha_nac: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: false
     },
     genero: {
         type: Sequelize.STRING(10),
-        allowNull: false,
+        allowNull: false //HACER CAMBIO EN HTML DE OBLIGATORIO *
     },
-    correo_Electronico: {
+    correoElectronico: {
         type: Sequelize.STRING(50),
-        allowNull: false
+        allowNull: true
     },
     contrasena: {
         type: Sequelize.STRING(50),
         allowNull: false
     },
-    estadoMex: {
-        type: Sequelize.STRING(50),
-        allowNull: false
-    },
     escolaridad: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(20),
+        allowNull: true
+    },
+    gradoEscolar: {
+        type: Sequelize.STRING(20),
+        allowNull: true
+    },
+    estadoMex: {
+        type: Sequelize.STRING(40),
         allowNull: false
     },
-    correo_Electronico: {
-        type: Sequelize.STRING(50),
-        allowNull: false
-    },
-    carrera_steam: {
+    carreraSteam: {
         type: Sequelize.INTEGER,
-        /*references: {
-            model: Estudiante_Carrera
-            key: ID_carrera
-        }*/
+        references: {
+            model: Estudiante_Carrera,
+            key: idCarrera
+        },
         allowNull: false
     }
 });
