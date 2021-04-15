@@ -1,47 +1,48 @@
 // Traer el modelo de la tabla usuario
-const Formulario_Estudiante = require("../models/Formulario_Estudiante");
+const Formulario_Estudiante = require('../models/Formulario_Estudiante');
 const path = require("path");
-const { type } = require("os");
 
-exports.getAgregarUsuario = (req,res)=>{
-    let datos0 = req.body.datosJSON;
-    let datos = JSON.parse(datos0);
 
-    Jugador.create({
-        Usuario: datos.usuario,
-        Password: datos.password,
-        HoraInicio: datos.horaInicio
-    }).then(resultado => console.log("Registro exitoso"))
-      .catch(error => console.log(error));
-    res.send("Registrado");
+exports.getAgregarUsuario = (req,res) =>{
+    res.sendFile(path.join(__dirname,'..','views','Formularioeq3.html'));
+};
+
+exports.getRegistros = (req,res)=>{
+    //Query todos los usuario
+    Formulario_Estudiante.findAll()
+        .then(registros=>{
+            console.log(registros)
+            var data =[];
+            registros.forEach(registro=>{
+                data.push(registro.dataValues);
+            });
+            console.log(data);
+            res.render('ejemploEJS.html',{
+                personas: data,
+                sesion:"Autorizado",
+                hora: "14:00"
+            });
+        });
 };
 
 exports.postAgregarUsuario = (req,res)=>{
-    let datos0 = req.body.datosJSON;
-    let datos = JSON.parse(datos0);
-
-    Jugador.create({
-        Usuario: datos.usuario,
-        Password: datos.password,
-        HoraInicio: datos.horaInicio
-    }).then(resultado => console.log("Registro exitoso"))
-      .catch(error => console.log(error));
-    res.send("Registrado");
+    console.log(req.body);
+    let area = parseInt(req.body.areausuario);
+    Formulario_Estudiante.create({
+        nickname:req.body.nombreusuario,
+        fechaNac: req.body.nacimientousuario,
+        genero: req.body.generousuario,
+        correoElectronico: req.body.correousuario,
+        contrasena: req.body.passwordusuario,
+        escolaridad: req.body.escolaridadusuario,
+        gradoEscolar: req.body.gradousuario,
+        estadoMex: req.body.estadousuario,
+        areaSteam: area
+    }).then(resultado=>console.log("Registro exitoso"))
+    .catch(error=>console.log(error))
+    res.redirect("/estudiante/registros");
 };
 
-exports.getConfirmacion = (req,res) => {
-    console.log(req);
-    let datos0 = req.body.datosJSON;
-    let datos = JSON.parse(datos0);
-
-    Jugador.findByPk(datos.usuario)
-        .then(usuario0 => {
-            usuario0.HoraFinal = datos.horaFinal
-            return usuario0 && usuario0.save();
-        })
-        .then(resultado => {
-            console.log("Usuario actualizado exitosamente");
-            console.log(resultado);
-        })
-        .catch(error => console.log(error))
+exports.getConfirmacion = (req,res)=>{
+    res.send("Registro exitoso");
 }

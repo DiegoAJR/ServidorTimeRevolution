@@ -21,6 +21,11 @@ app.use(bodyParser.json());
 // Middleware para configurar la recepcion de formularios
 app.use(bodyParser.urlencoded({extended:true}));
 
+//Configurar la visualización de plantillas
+app.engine('html',require('ejs').renderFile);
+app.set('view engine','ejs');
+
+
 app.use("/estudiante", estudianteRoutes);
 
 let puerto = 8080;

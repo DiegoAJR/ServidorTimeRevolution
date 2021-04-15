@@ -41,7 +41,7 @@ Ultima modificación: 09/03/2021
             <p>Llena los siguientes campos con los datos de usuario (Espacios con asterisco son obligatorios):</p>
             </br>
             <!--Formulario de métodod Get de doble columna y con validación -->
-            <form action="#" method="GET" class="form-floating needs-validation" novalidate>
+            <form action="/estudiante/agregarJugador" method="POST" class="form-floating needs-validation" novalidate>
                 <div class="row">
                     <div class="col">
                         <label>Nickname*</label>
@@ -62,7 +62,7 @@ Ultima modificación: 09/03/2021
                             id="nacimientousuario" name="nacimientousuario" required>
                     </div>
                     <div class="col-md">
-                        <label for="generousuario" class="form-label">Genero</label>
+                        <label for="generousuario" class="form-label">Genero*</label>
                         </br>
                         <select class="form-select" id="generousuario" aria-label="Genero del usuario"
                             name="generousuario" required>
@@ -90,7 +90,7 @@ Ultima modificación: 09/03/2021
                     <div class="col">
                         <label for="gradousuario">Grado escolar</label>
                         </br>
-                        <select class="form-select" id="gradousuario" aria-label="Grado de estudios">
+                        <select class="form-select" id="gradousuario" aria-label="Grado de estudios" name="gradousuario">
                             <option selected>Seleccionar</option>
                             <option value="Primero">Primero 1°</option>
                             <option value="Segundo">Segundo 2°</option>
@@ -145,7 +145,7 @@ Ultima modificación: 09/03/2021
                     <div class="col">
                         <label for="areausuario">Área de estudios interesado:</label>
                         </br>
-                        <select class="form-select" id="areausuario" aria-label="Area de estudios">
+                        <select class="form-select" id="areausuario" aria-label="Area de estudios" name="areausuario">
                             <option selected>Seleccionar</option>
                             <option value="1">Ciencias</option>
                             <option value="2">Tecnología</option>
@@ -161,11 +161,6 @@ Ultima modificación: 09/03/2021
                     <label>Correo electronico</label>
                     <input type="text" class="form-control" placeholder="Ingrese su correo electronico"
                         id="correousuario" name="correousuario">
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="sabermas">
-                    <label class="form-check-label" for="sabermas">
-                        Quiero recibir información de la Organización STEAM</label>
                 </div>
                 </br>
                 <!--Botones -->

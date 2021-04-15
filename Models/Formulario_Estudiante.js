@@ -14,13 +14,13 @@ const Formulario_Estudiante = sequelize.define("Formulario_Estudiante",{
         type: Sequelize.STRING(50),
         allowNull: false
     },
-    fecha_nac: {
+    fechaNac: {
         type: Sequelize.DATE,
         allowNull: false
     },
     genero: {
         type: Sequelize.STRING(10),
-        allowNull: false //HACER CAMBIO EN HTML DE OBLIGATORIO *
+        allowNull: false
     },
     correoElectronico: {
         type: Sequelize.STRING(50),
@@ -42,13 +42,14 @@ const Formulario_Estudiante = sequelize.define("Formulario_Estudiante",{
         type: Sequelize.STRING(40),
         allowNull: false
     },
-    carreraSteam: {
+    areaSteam: {
         type: Sequelize.INTEGER,
-        references: {
-            model: Estudiante_Carrera,
-            key: idCarrera
-        },
         allowNull: false
+        // references: {
+        //     model: Area_Steam,
+        //     key: idArea
+        // },
+        // allowNull: false
     }
 });
 

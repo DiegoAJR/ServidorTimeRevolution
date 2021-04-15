@@ -1,6 +1,6 @@
 //Configuracion de Sequelize
 const Sequelize = require("sequelize");
-const sequlize = new Sequelize("VideojuegoBD","sa","Password1234$", {
+const sequlize = new Sequelize("TimeRevolutionBD","sa","Password1234$", {
     dialect: "mssql",
     dialectOptions: {
         options: {
