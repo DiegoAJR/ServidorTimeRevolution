@@ -1,2 +1,2 @@
 # ServidorTimeRevolution
- Servidor del juego TIme Revolution
+Servidor del juego TIme Revolution

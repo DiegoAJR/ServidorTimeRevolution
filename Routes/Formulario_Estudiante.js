@@ -1,3 +1,9 @@
+/* Rutas de la tabla Formulario_Estudiante
+ * Agrega usuarios
+ * Muestra confirmación
+ * Muestra registros
+ */
+
 const express = require("express");
 const formulario_estudianteController = require("../controllers/Formulario_Estudiante");
 const router = express.Router();

@@ -1,3 +1,5 @@
+// Archivo index del servidor del juego Time Revolution
+
 // Biblioteca para definir lo que es un JSON
 const bodyParser = require('body-parser')
 // Biblioteca para generar rutas de acuerdo al OS
@@ -21,12 +23,12 @@ app.use(bodyParser.json());
 // Middleware para configurar la recepcion de formularios
 app.use(bodyParser.urlencoded({extended:true}));
 
+app.use("/estudiante", estudianteRoutes);
+
 //Configurar la visualización de plantillas
 app.engine('html',require('ejs').renderFile);
 app.set('view engine','ejs');
 
-
-app.use("/estudiante", estudianteRoutes);
 
 let puerto = 8080;
 

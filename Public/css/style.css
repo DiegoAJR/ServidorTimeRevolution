@@ -1,0 +1,57 @@
+/*
+Tablero CSS Equipo 3: Time revolution para STEAM
+Código realizado por:
+Diego Alejandro Juárez Ruiz - A01379566
+Roberto Valdez Jasso - A01746863 
+Luis Enrique Zamarripa Marín - A01379918
+Melissa Garduño Ruiz - A01748945
+Renata de Luna Flores - A01750484
+Ultima modificación: 09/03/2021
+- Código CSS para modificar el Tablero HTML.
+*/
+
+/* HTML Tags */
+h1 
+{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body 
+{
+    background-color: rgb(245, 225, 171);
+}
+
+footer
+{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+
+/* Clases */
+.container
+{
+    background-color: white;
+}
+
+.primer-elemento
+{
+    margin-top: 5%;
+}
+
+.ultimo-elemento
+{
+    margin-bottom: 0px;
+}
+
+.cuerpo
+{
+    margin-bottom: 2%;
+    padding: 1% 1%;
+}
+
+.primer-btn
+{
+    margin-right: 2%;
+}

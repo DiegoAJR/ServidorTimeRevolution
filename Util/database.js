@@ -1,6 +1,7 @@
-//Configuracion de Sequelize
+//Configuracion de Sequelize para conexión de BD
+
 const Sequelize = require("sequelize");
-const sequlize = new Sequelize("TimeRevolutionBD","sa","Password1234$", {
+const sequelize = new Sequelize("TimeRevolutionBD","sa","Password1234$", {
     dialect: "mssql",
     dialectOptions: {
         options: {
@@ -15,4 +16,4 @@ const sequlize = new Sequelize("TimeRevolutionBD","sa","Password1234$", {
 })
 
 //Exportando el objeto sequelize
-module.exports = sequlize;
+module.exports = sequelize;

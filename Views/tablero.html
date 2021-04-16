@@ -1,0 +1,67 @@
+<!-- 
+Tablero equipo 3: Time revolution para STEAM
+Código realizado por:
+Diego Alejandro Juárez Ruiz - A01379566
+Roberto Valdez Jasso - A01746863 
+Luis Enrique Zamarripa Marín - A01379918
+Melissa Garduño Ruiz - A01748945
+Renata de Luna Flores - A01750484
+Ultima modificación: 15/04/2021
+- Código HTML que muestra un tablero con algunos campos que podrían resultar importantes para STEAM en un juego.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Inclusión de la decodificación del idioma español -->
+        <meta charset="UTF-8"/>
+        <!--Escala para cualquier pantalla -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
+        <!--Importamos archivo CSS -->
+        <link rel="stylesheet" href="/css/style.css"/>
+        <!--Titulo de pagina-->
+        <title>Tablero STEAM</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="primer-elemento">Tablero de datos</h1>
+            </div>
+        </header>
+        <!--Contenedor de todo el tablero -->
+        <div class="container cuerpo">
+            <!--Tabla con datos importantes para STEAM -->
+            <table class="table table-hover table-bordered table-striped" style="text-align: center;" id="tabla">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nickname</th>
+                        <th scope="col">Fecha de nacimiento</th>
+                        <th scope="col">Género</th>
+                        <th scope="col">Escolaridad</th>
+                        <th scope="col">Grado escolar</th>
+                        <th scope="col">Estado de la República</th>
+                        <th scope="col">Correo electrónico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%personas.forEach((persona)=>{%>
+                    <tr>
+                        <td><%=persona.nickname%></td>
+                        <td><%=persona.fechaNac%></td>
+                        <td><%=persona.genero%></td>
+                        <td><%=persona.escolaridad%></td>
+                        <td><%=persona.gradoEscolar%></td>
+                        <td><%=persona.estadoMex%></td>
+                        <td><%=persona.correoElectronico%></td>
+                    </tr>
+                    <%});%>
+                </tbody>
+            </table>
+
+        <!--Importamos archivo Javascript -->
+        <script src="script-tablero.js"></script>
+    </body>
+</html>

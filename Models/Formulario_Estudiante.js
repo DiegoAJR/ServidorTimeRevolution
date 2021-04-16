@@ -1,8 +1,10 @@
+// Definición del modelo de la tabla Formulario_Estudiante
+
 const Sequelize = require("sequelize");
 //Traer el objeto sequelize
 const sequelize = require("../util/database");
-//Definicion del modelo
 
+//Definicion del modelo
 const Formulario_Estudiante = sequelize.define("Formulario_Estudiante",{
     idFormulario: {
         type: Sequelize.INTEGER,

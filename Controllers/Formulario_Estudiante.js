@@ -1,3 +1,9 @@
+/* Controladores de la tabla Formulario_Estudiante
+ * Agrega usuarios
+ * Muestra confirmación
+ * Muestra registros
+ */
+
 // Traer el modelo de la tabla usuario
 const Formulario_Estudiante = require('../models/Formulario_Estudiante');
 const path = require("path");
@@ -11,16 +17,13 @@ exports.getRegistros = (req,res)=>{
     //Query todos los usuario
     Formulario_Estudiante.findAll()
         .then(registros=>{
-            console.log(registros)
             var data =[];
             registros.forEach(registro=>{
                 data.push(registro.dataValues);
             });
             console.log(data);
-            res.render('ejemploEJS.html',{
+            res.render('tablero.html',{
                 personas: data,
-                sesion:"Autorizado",
-                hora: "14:00"
             });
         });
 };
@@ -40,9 +43,9 @@ exports.postAgregarUsuario = (req,res)=>{
         areaSteam: area
     }).then(resultado=>console.log("Registro exitoso"))
     .catch(error=>console.log(error))
-    res.redirect("/estudiante/registros");
+    res.redirect("/estudiante/confirmacion");
 };
 
 exports.getConfirmacion = (req,res)=>{
-    res.send("Registro exitoso");
+    res.sendFile(path.join(__dirname,'..','views','Confirmacion.html'));
 }
