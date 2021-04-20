@@ -13,14 +13,20 @@ Ultima modificación: 09/03/2021
 /* Clases */
 .container-fluid{
     background-color: rgb(245, 225, 171);
-    height: 98%;
+    height: 100%;
 }
 
 .container{
     background-color: rgb(252, 252, 252);
 }
+.row {
+    padding:0.7rem;
+}
 
 .botones{
+    text-align: center;
+}
+.registro{
     text-align: center;
 }
 
@@ -46,7 +52,7 @@ footer{
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;   
+    height: 2rem;
 }
 
 html, body {
