@@ -42,6 +42,7 @@ const Formulario_Estudiante = (sequelize) => {
             type: Sequelize.STRING(40),
             allowNull: false
         },
+        /*
         areaSteam: {
             type: Sequelize.INTEGER,
             allowNull: false
@@ -51,6 +52,7 @@ const Formulario_Estudiante = (sequelize) => {
             // },
             // allowNull: false
         }
+        */
     });
 }
 

@@ -32,7 +32,7 @@ app.set('view engine','ejs');
 
 let puerto = 8080;
 
-sequelize.sync()
+sequelize.sync({force:true})
     .then(resultado => {
         console.log("Conexion exitosa");
         // Lanza el servidor para escuchar peticiones

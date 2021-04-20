@@ -21,8 +21,11 @@ const sequelize = new Sequelize("TimeRevolutionBD","sa","Password1234$", {
 const modelDefiners = [
     require("../models/Formulario_Estudiante"), 
     require("../models/Area_Steam"),
-    require("../models/Competencia_Steam"),
-    require("../Models/Competencia_Area")
+    require("../models/Jugador_Usuario"),
+    require("../models/Logro"),
+    require("../models/Logro_Jugador"),
+    require("../models/Partida"),
+    require("../models/Stats")
 ]
 
 //Vincular el objeto de conexion con los modelos
