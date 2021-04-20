@@ -13,7 +13,6 @@ Ultima modificación: 09/03/2021
 /* Clases */
 .container-fluid{
     background-color: rgb(245, 225, 171);
-    height: 100%;
 }
 
 .container{
@@ -58,4 +57,3 @@ footer{
 html, body {
     height: 100%;
 }
-
