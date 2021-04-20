@@ -2,15 +2,17 @@
  * Agrega usuarios
  * Muestra confirmación
  * Muestra registros
+ * Muestra Login
  */
 
-// Traer el modelo de la tabla usuario
-const Formulario_Estudiante = require('../models/Formulario_Estudiante');
+const Sequelize = require("sequelize");
+const sequelize = require("../Util/database");
+const Formulario_Estudiante = sequelize.models.Formulario_Estudiante
 const path = require("path");
 
 
 exports.getAgregarUsuario = (req,res) =>{
-    res.sendFile(path.join(__dirname,'..','views','Formularioeq3.html'));
+    res.sendFile(path.join(__dirname,"..","views","Formularioeq3.html"));
 };
 
 exports.getRegistros = (req,res)=>{
@@ -22,7 +24,7 @@ exports.getRegistros = (req,res)=>{
                 data.push(registro.dataValues);
             });
             console.log(data);
-            res.render('tablero.html',{
+            res.render("tablero.html",{
                 personas: data,
             });
         });
@@ -40,12 +42,16 @@ exports.postAgregarUsuario = (req,res)=>{
         escolaridad: req.body.escolaridadusuario,
         gradoEscolar: req.body.gradousuario,
         estadoMex: req.body.estadousuario,
-        areaSteam: area
+        AreaSteamIdAreaSteam: area
     }).then(resultado=>console.log("Registro exitoso"))
     .catch(error=>console.log(error))
     res.redirect("/estudiante/confirmacion");
 };
 
 exports.getConfirmacion = (req,res)=>{
-    res.sendFile(path.join(__dirname,'..','views','Confirmacion.html'));
+    res.sendFile(path.join(__dirname,"..","views","Confirmacion.html"));
+}
+
+exports.getLogin = (req,res) => {
+    res.sendFile(path.join(__dirname, "..","views","Login.html"));
 }

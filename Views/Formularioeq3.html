@@ -36,150 +36,149 @@ Ultima modificación: 15/04/2021
                 </header>
             </div>
 
-                <!--Contenedor de todo el formulario -->
-                <div class="container">
+            <div class="container">
+                <br>
+                <p>Llena los siguientes campos con los datos de usuario (Espacios con asterisco son obligatorios):</p>
+                <br>
+                <!--Formulario de métodod Get de doble columna y con validación -->
+                <form action="/estudiante/agregarJugador" method="POST" class="form-floating needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col">
+                            <label>Nickname*</label>
+                            <input type="text" class="form-control" placeholder="Ingrese su nickname" id="nombreusuario"
+                                name="nombreusuario" required>
+                        </div>
+                        <div class="col">
+                            <label>Contraseña*</label>
+                            <input type="password" class="form-control" placeholder="Ingrese su contraseña"
+                                id="passwordusuario" name="passwordusuario" required>
+                        </div>
+                    </div>
                     <br>
-                    <p>Llena los siguientes campos con los datos de usuario (Espacios con asterisco son obligatorios):</p>
-                    <br>
-                    <!--Formulario de métodod Get de doble columna y con validación -->
-                    <form action="/estudiante/agregarJugador" method="POST" class="form-floating needs-validation" novalidate>
-                        <div class="row">
-                            <div class="col">
-                                <label>Nickname*</label>
-                                <input type="text" class="form-control" placeholder="Ingrese su nickname" id="nombreusuario"
-                                    name="nombreusuario" required>
-                            </div>
-                            <div class="col">
-                                <label>Contraseña*</label>
-                                <input type="password" class="form-control" placeholder="Ingrese su contraseña"
-                                    id="passwordusuario" name="passwordusuario" required>
-                            </div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Fecha de nacimiento*</label>
+                            <input type="date" class="form-control" placeholder="Ingrese fecha de nacimiento"
+                                id="nacimientousuario" name="nacimientousuario" required>
                         </div>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <label>Fecha de nacimiento*</label>
-                                <input type="date" class="form-control" placeholder="Ingrese fecha de nacimiento"
-                                    id="nacimientousuario" name="nacimientousuario" required>
-                            </div>
-                            <div class="col-md">
-                                <label for="generousuario" class="form-label">Género*</label>
-                                <br>
-                                <select class="form-select" id="generousuario" aria-label="Genero del usuario"
-                                    name="generousuario" required>
-                                    <option selected>Seleccionar</option>
-                                    <option value="Femenino">Femenino</option>
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="No aplica">No aplica</option>
-                                </select>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <label for="escolaridadusuario">Escolaridad</label>
-                                <br>
-                                <select class="form-select" id="escolaridadusuario" aria-label="Escolaridad de estudios" name="escolaridadusuario">
-                                    <option selected>Seleccionar</option>
-                                    <option value="Primaria">Primaria</option>
-                                    <option value="Secundaria">Secundaria</option>
-                                    <option value="Preparatoria">Preparatoria</option>
-                                    <option value="Universidad">Universidad</option>
-                                    <option value="No aplica">No aplica</option>
-                                </select>
-                            </div>
-                            <div class="col">
-                                <label for="gradousuario">Grado escolar</label>
-                                <br>
-                                <select class="form-select" id="gradousuario" aria-label="Grado de estudios" name="gradousuario">
-                                    <option selected>Seleccionar</option>
-                                    <option value="Primero">Primero 1°</option>
-                                    <option value="Segundo">Segundo 2°</option>
-                                    <option value="Tercero">Tercero 3°</option>
-                                    <option value="No aplica">No aplica</option>
-                                </select>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <label for="estadousuario">Estado de la Republica</label>
-                                <br>
-                                <select class="form-select" id="estadousuario" aria-label="Estado de Mexico" name="estadousuario">
+                        <div class="col-md">
+                            <label for="generousuario" class="form-label">Género*</label>
+                            <br>
+                            <select class="form-select" id="generousuario" aria-label="Genero del usuario"
+                                name="generousuario" required>
                                 <option selected>Seleccionar</option>
-                                <option value="Aguascalientes">Aguascalientes</option>
-                                <option value="Baja California Norte">Baja California Norte</option>
-                                <option value="Baja California Sur">Baja California Sur</option>
-                                <option value="Campeche">Campeche</option>
-                                <option value="Chiapas">Chiapas</option>
-                                <option value="Chihuahua">Chihuahua</option>
-                                <option value="Ciudad de Mexico">Ciudad de México</option>
-                                <option value="Coahuila">Coahuila</option>
-                                <option value="Colima">Colima</option>
-                                <option value="Durango">Durango</option>
-                                <option value="Estado de Mexico">Estado de México</option>
-                                <option value="Guanajuato">Guanajuato</option>
-                                <option value="Guerrero">Guerrero</option>
-                                <option value="Hidalgo">Hidalgo</option>
-                                <option value="Jalisco">Jalisco</option>
-                                <option value="Michoacan">Michoacán</option>
-                                <option value="Morelos">Morelos</option>
-                                <option value="Nayarit">Nayarit</option>
-                                <option value="Nuevo Leon">Nuevo Leon</option>
-                                <option value="Oaxaca">Oaxaca</option>
-                                <option value="Puebla">Puebla</option>
-                                <option value="Queretaro">Querétaro</option>
-                                <option value="Quintana Roo">Quintana Roo</option>
-                                <option value="San Luis Potosi">San Luis Potosi</option>
-                                <option value="Sinaloa">Sinaloa</option>
-                                <option value="Sonora">Sonora</option>
-                                <option value="Tabasco">Tabasco</option>
-                                <option value="Tamaulipas">Tamaulipas</option>
-                                <option value="Tlaxcala">Tlaxcala</option>
-                                <option value="Veracruz">Veracruz</option>
-                                <option value="Yucatan">Yucatan</option>
-                                <option value="Zacatecas">Zacatecas</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Masculino">Masculino</option>
                                 <option value="No aplica">No aplica</option>
                             </select>
                         </div>
-
-                            <div class="col">
-                                <label for="areausuario">Área de estudios interesado:</label>
-                                <br>
-                                <select class="form-select" id="areausuario" aria-label="Area de estudios" name="areausuario">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">Ciencias</option>
-                                    <option value="2">Tecnología</option>
-                                    <option value="3">Ingeniería</option>
-                                    <option value="4">Matemáticas</option>
-                                    <option value="5">Arte</option>
-                                    <option value="6">Ninguna</option>
-                                </select>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <label>Correo electronico</label>
-                            <input type="text" class="form-control" placeholder="Ingrese su correo electronico"
-                                id="correousuario" name="correousuario">
-                        </div>
-                        <br>
-                        <!--Botones -->
-                        <div class="botones">
-                            <button class="btn btn-outline-danger" type="reset">Borrar</button>
-                            <button class="btn btn-outline-dark" type="submit">Enviar</button>
-                        </div>
-                    </form>
+                    </div>
                     <br>
-                </div>
-                <br>
-                <br>
+                    <div class="row">
+                        <div class="col">
+                            <label for="escolaridadusuario">Escolaridad</label>
+                            <br>
+                            <select class="form-select" id="escolaridadusuario" aria-label="Escolaridad de estudios" name="escolaridadusuario">
+                                <option selected>Seleccionar</option>
+                                <option value="Primaria">Primaria</option>
+                                <option value="Secundaria">Secundaria</option>
+                                <option value="Preparatoria">Preparatoria</option>
+                                <option value="Universidad">Universidad</option>
+                                <option value="No aplica">No aplica</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="gradousuario">Grado escolar</label>
+                            <br>
+                            <select class="form-select" id="gradousuario" aria-label="Grado de estudios" name="gradousuario">
+                                <option selected>Seleccionar</option>
+                                <option value="Primero">Primero 1°</option>
+                                <option value="Segundo">Segundo 2°</option>
+                                <option value="Tercero">Tercero 3°</option>
+                                <option value="No aplica">No aplica</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <label for="estadousuario">Estado de la Republica</label>
+                            <br>
+                            <select class="form-select" id="estadousuario" aria-label="Estado de Mexico" name="estadousuario">
+                            <option selected>Seleccionar</option>
+                            <option value="Aguascalientes">Aguascalientes</option>
+                            <option value="Baja California Norte">Baja California Norte</option>
+                            <option value="Baja California Sur">Baja California Sur</option>
+                            <option value="Campeche">Campeche</option>
+                            <option value="Chiapas">Chiapas</option>
+                            <option value="Chihuahua">Chihuahua</option>
+                            <option value="Ciudad de Mexico">Ciudad de México</option>
+                            <option value="Coahuila">Coahuila</option>
+                            <option value="Colima">Colima</option>
+                            <option value="Durango">Durango</option>
+                            <option value="Estado de Mexico">Estado de México</option>
+                            <option value="Guanajuato">Guanajuato</option>
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Hidalgo">Hidalgo</option>
+                            <option value="Jalisco">Jalisco</option>
+                            <option value="Michoacan">Michoacán</option>
+                            <option value="Morelos">Morelos</option>
+                            <option value="Nayarit">Nayarit</option>
+                            <option value="Nuevo Leon">Nuevo Leon</option>
+                            <option value="Oaxaca">Oaxaca</option>
+                            <option value="Puebla">Puebla</option>
+                            <option value="Queretaro">Querétaro</option>
+                            <option value="Quintana Roo">Quintana Roo</option>
+                            <option value="San Luis Potosi">San Luis Potosi</option>
+                            <option value="Sinaloa">Sinaloa</option>
+                            <option value="Sonora">Sonora</option>
+                            <option value="Tabasco">Tabasco</option>
+                            <option value="Tamaulipas">Tamaulipas</option>
+                            <option value="Tlaxcala">Tlaxcala</option>
+                            <option value="Veracruz">Veracruz</option>
+                            <option value="Yucatan">Yucatan</option>
+                            <option value="Zacatecas">Zacatecas</option>
+                            <option value="No aplica">No aplica</option>
+                        </select>
+                    </div>
+
+                        <div class="col">
+                            <label for="areausuario">Área de estudios interesado:</label>
+                            <br>
+                            <select class="form-select" id="areausuario" aria-label="Area de estudios" name="areausuario">
+                                <option selected>Seleccionar</option>
+                                <option value="1">Ciencias</option>
+                                <option value="2">Tecnología</option>
+                                <option value="3">Ingeniería</option>
+                                <option value="4">Matemáticas</option>
+                                <option value="5">Arte</option>
+                                <option value="6">Ninguna</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>Correo electronico</label>
+                        <input type="text" class="form-control" placeholder="Ingrese su correo electronico"
+                            id="correousuario" name="correousuario">
+                    </div>
+                    <br>
+                    <!--Botones -->
+                    <div class="botones">
+                        <button class="btn btn-outline-danger" type="reset">Borrar</button>
+                        <button class="btn btn-outline-dark" type="submit">Enviar</button>
+                    </div>
+                </form>
                 <br>
             </div>
-        <footer>
-            <p>Conoce a STEAM en su <a href="https://movimientosteam.org/">pagina web</a> </p>
-        </footer>
-        <!--Importamos el archivo Javascript -->
-        <script src="/js/FormularioJS.js"></script>
+            <br>
+            <br>
+            <br>
+        </div>
+    <footer>
+        <p>Conoce a STEAM en su <a href="https://movimientosteam.org/">pagina web</a> </p>
+    </footer>
+    <!--Importamos el archivo Javascript -->
+    <script src="/js/FormularioJS.js"></script>
     </body>
 </html>

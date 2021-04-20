@@ -19,7 +19,17 @@
                 <br>
                 <p>El usuario ha sido registrado.</p>
                 <br>
+                <div class="boton">
+                    <button id="redirect" class="btn btn-outline-dark">Continuar</button>
+                </div>
+                <br>
             </div>
         </div>
+
+        <script type="text/javascript">
+            document.getElementById("redirect").onclick = function () {
+                location.href = "http://localhost:8080/estudiante/login";
+            };
+        </script>
     </body>
 </html>
