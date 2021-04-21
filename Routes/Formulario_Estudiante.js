@@ -17,11 +17,14 @@ router.post("/agregarJugador", formulario_estudianteController.postAgregarUsuari
 //Mostrar al usuario el resultado de la transaccion
 router.get("/confirmacion", formulario_estudianteController.getConfirmacion);
 
-//Mostrar los registros de la base de datos
-router.get('/registros', formulario_estudianteController.getRegistros);
-
 //Muestra la página de Login
-router.get("/login", formulario_estudianteController.getLogin)
+router.get("/login", formulario_estudianteController.getLogin);
+
+//Obtener los datos de LOGIN
+router.post("/login",formulario_estudianteController.postLogin);
+
+// Mostrar la página principal
+router.get('/paginaPrincipal',formulario_estudianteController.getPaginaPrincipal);
 
 
 module.exports = router;

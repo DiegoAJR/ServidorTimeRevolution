@@ -11,6 +11,7 @@ const express = require('express');
 const sequelize = require("./util/database");
 // Traer las rutas
 const estudianteRoutes = require("./Routes/Formulario_Estudiante");
+const estudianteRoutes = require("./Routes/Steam_vistas");
 
 // Crear el servidor
 const app = express();
@@ -24,6 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use("/estudiante", estudianteRoutes);
+app.use("/steam", steamRoutes);
 
 //Configurar la visualización de plantillas
 app.engine('html',require('ejs').renderFile);

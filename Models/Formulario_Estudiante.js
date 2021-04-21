@@ -12,10 +12,11 @@ const Formulario_Estudiante = (sequelize) => {
         },
         nickname: {
             type: Sequelize.STRING(50),
-            allowNull: false
+            allowNull: false,
+            unique: true
         },
         fechaNac: {
-            type: Sequelize.DATE,
+            type: Sequelize.DATEONLY,
             allowNull: false
         },
         genero: {

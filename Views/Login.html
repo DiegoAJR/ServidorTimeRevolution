@@ -28,16 +28,16 @@
                 <br>
                 <p>Ingresa tu información para iniciar sesión</p>
                 <br>
-                <form action="#" method="GET" class="form-floating needs-validation" novalidate>
+                <form action="/estudiante/login" method="POST" class="form-floating needs-validation" novalidate>
                     <div class="row">
-                        <label> Usuario o email</label>
-                        <input type="text" class="form-control" placeholder="Ejemplo: estudiante@outlook.com" id="loginusuario"
+                        <label> Usuario o Nickname</label>
+                        <input type="text" class="form-control" placeholder="Ingrese su nicknae" id="loginusuario"
                         name="loginusuario" required>
                     </div>
                     <div class="row">
                         <label> Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Ingrese su contraseña" id="logincontraseña"
-                        name="logincontraseña" required>
+                        <input type="password" class="form-control" placeholder="Ingrese su contraseña" id="logincontrasena"
+                        name="logincontrasena" required>
                     </div>
                     <br>
                     <div class="botones">
@@ -45,6 +45,11 @@
                         <button class="btn btn-outline-dark" type="entrar">Enviar</button>
                     </div>
                     <br><br>
+                    <div class = "registro">
+                    <p>¿Todavia no tienes una cuenta?</p>
+                    <button type="button" id="redirect" class="btn btn-outline-info">Registrame</button>
+                    </div>
+                    <br>
                 </form>
             </div>
             <br><br><br>
@@ -54,5 +59,10 @@
         </footer>
         <!--Importamos el archivo Javascript -->
         <script src="/js/FormularioJS.js"></script>
+        <script type="text/javascript">
+            document.getElementById("redirect").onclick = function () {
+                location.href = "http://localhost:8080/estudiante/agregarJugador";
+            };
+        </script>
 </body>
 </html>

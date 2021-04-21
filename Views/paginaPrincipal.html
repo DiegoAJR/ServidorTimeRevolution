@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/PaginaPrincipalStyle.css">
+        <title>Página Principal</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+                <br><br>
+                <div class="container cuerpo" id="titulo">
+                    <h1>Time Revolution</h1>
+                </div>
+                <br>
+                <div class="container">
+                    <h1 class="primer-elemento"><%=nickname%></h1>
+                </div>
+            </header>
+            <div class="container cuerpo">
+                <br>
+                <p>Logros que has conseguido del juego</p>
+                <br>
+                <h2>Logros</h2>
+                <br>
+                <table class="table table-hover table-bordered table-striped" style="text-align: center;" id="tabla">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Puntaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%datoslogros.forEach((logro)=>{%>
+                        <tr>
+                            <td><%=logro.nombre%></td>
+                            <td><%=logro.descripcion%></td>
+                            <td><%=logro.puntaje%></td>
+                        </tr>
+                        <%});%>
+                    </tbody>
+                </table>
+                <br>
+                <h2>Estadísticas</h2>
+                <br>
+                <p>Estadisticas de partidas por cada nivel completado:</p>
+                <br>
+                <table class="table table-hover table-bordered table-striped" style="text-align: center;" id="tabla">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Tiempo Record</td>
+                            <th scope="col">Tiempo Base</td>
+                            <th scope="col">Nivel</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%datosstats.forEach((stat)=>{%>
+                        <tr>
+                            <td><%=stat.tiempoRecord%></td>
+                            <td><%=stat.tiempoBase%></td>
+                            <td><%=stat.nivel%></td>
+                        </tr>
+                        <%});%>
+                    </tbody>
+                </table>
+                <br>
+                <div class="boton">
+                    <button id="download" class="btn btn-outline-dark">Descargar Time Revolution</button>
+                    <button id="cerrar" class="btn btn-outline-danger">Cerrar sesión</button>
+                </div>
+                <br>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("download").onclick = function () {
+                console.log("Hello World!");
+            };
+        </script>
+        <script type="text/javascript">
+            document.getElementById("cerrar").onclick = function () {
+                location.href = "http://localhost:8080/estudiante/login";
+            };
+        </script>
+    </body>
+</html>
