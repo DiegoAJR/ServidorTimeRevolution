@@ -60,7 +60,15 @@ Ultima modificación: 15/04/2021
                     <%});%>
                 </tbody>
             </table>
-
+            <br><br>
+            <div class="boton">
+                <button id="cerrar" class="btn btn-outline-danger">Cerrar sesión</button>
+            </div>
+        <script type="text/javascript">
+            document.getElementById("cerrar").onclick = function () {
+                location.href = "http://localhost:8080/steam/loginsteam";
+            };
+        </script>
         <!--Importamos archivo Javascript -->
         <script src="script-tablero.js"></script>
     </body>

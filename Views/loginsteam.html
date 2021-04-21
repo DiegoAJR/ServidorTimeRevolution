@@ -28,21 +28,22 @@
                 <br>
                 <p>Ingresa tu información para iniciar sesión</p>
                 <br>
-                <form action="#" method="GET" class="form-floating needs-validation" novalidate>
+                <form action="/steam/loginsteam" method="POST" class="form-floating needs-validation" novalidate>
                     <div class="row">
-                        <label> Usuario o email</label>
-                        <input type="text" class="form-control" placeholder="Ejemplo: estudiante@outlook.com" id="loginusuario"
+                        <label> Usuario de administrador</label>
+                        <input type="text" class="form-control" placeholder="Usuario" id="loginusuario"
                         name="loginusuario" required>
                     </div>
                     <div class="row">
                         <label> Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Ingrese su contraseña" id="logincontraseña"
-                        name="logincontraseña" required>
+                        <input type="password" class="form-control" placeholder="Contraseña" id="logincontrasena"
+                        name="logincontrasena" required>
                     </div>
                     <br>
                     <div class="botones">
                         <button class="btn btn-outline-danger" type="reset">Borrar</button>
-                        <button class="btn btn-outline-dark" type="entrar">Enviar</button>
+                        <button class="btn btn-outline-dark">Enviar</button>
+                        <button class="btn btn-outline-info" id="usuario"> Login Usuario</button>
                     </div>
                     <br><br>
                 </form>
@@ -52,6 +53,11 @@
         <footer>
             <p>Conoce a STEAM en su <a href="https://movimientosteam.org/">pagina web</a> </p>
         </footer>
+        <script type="text/javascript">
+            document.getElementById("usuario").onclick = function () {
+                location.href = "http://localhost:8080/estudiante/login";
+            };
+        </script>
         <!--Importamos el archivo Javascript -->
         <script src="/js/FormularioJS.js"></script>
 </body>

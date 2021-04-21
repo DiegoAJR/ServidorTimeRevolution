@@ -1,4 +1,4 @@
-/* Controladores de la tabla Area_Steam
+/* Controladores de la tabla Steam_vistas
  * Agrega usuarios
  * Muestra confirmación
  * Muestra registros
@@ -7,7 +7,7 @@
 
 const Sequelize = require("sequelize");
 const sequelize = require("../Util/database");
-const Area_Steam = sequelize.models.Area_Steam
+const Formulario_Estudiante = sequelize.models.Formulario_Estudiante
 const path = require("path");
 
 exports.postLogin = (req,res) =>{
@@ -21,7 +21,7 @@ exports.postLogin = (req,res) =>{
             res.redirect("/steam/registros");
         }else{
             //Alerta de usuario incorrecto
-            res.redirect("/steam/login");
+            res.redirect("/steam/loginsteam");
         }
     })
     
@@ -29,7 +29,7 @@ exports.postLogin = (req,res) =>{
 }
 
 exports.getLogin = (req,res) => {
-    res.sendFile(path.join(__dirname, "..","views","Login.html"));
+    res.sendFile(path.join(__dirname, "..","views","loginsteam.html"));
 }
 
 exports.getRegistros = (req,res)=>{
