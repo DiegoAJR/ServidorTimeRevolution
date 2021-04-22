@@ -13,19 +13,11 @@ const path = require("path");
 exports.postLogin = (req,res) =>{
     let nickname = req.body.loginusuario;
     let contrasena = req.body.logincontrasena;
-    let busqueda = "SELECT nickname FROM Formulario_Estudiante WHERE nickname = '"+nickname+ "' and contrasena = '"+contrasena +"'";
-    sequelize.query(busqueda,{
-        type: Sequelize.QueryTypes.SELECT
-    }).then(alumnos=>{
-        if(alumnos.length == 1){
-            res.redirect("/steam/registros");
-        }else{
-            //Alerta de usuario incorrecto
-            res.redirect("/steam/loginsteam");
-        }
-    })
-    
-    .catch(err=>console.log(err))
+    if(nickname == "STEAM" && contrasena == "adminSTEAM") {
+        res.redirect("/steam/registros");
+    } else {
+        res.redirect("/steam/loginsteam");
+    }
 }
 
 exports.getLogin = (req,res) => {
@@ -46,3 +38,7 @@ exports.getRegistros = (req,res)=>{
             });
         });
 };
+
+exports.getDashboard = (req,res) => {
+    res.sendFile(path.join(__dirname, "..","views","Dashboard.html"));
+}

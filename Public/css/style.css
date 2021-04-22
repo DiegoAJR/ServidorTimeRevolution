@@ -30,6 +30,10 @@ footer
 
 
 /* Clases */
+.boton {
+    text-align: center;
+}
+
 .container
 {
     background-color: white;

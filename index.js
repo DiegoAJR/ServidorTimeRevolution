@@ -1,7 +1,7 @@
 // Archivo index del servidor del juego Time Revolution
 
 // Biblioteca para definir lo que es un JSON
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 // Biblioteca para generar rutas de acuerdo al OS
 const path = require('path');
 // Importa la biblioteca express para la creacion de servidores
@@ -14,6 +14,7 @@ const estudianteRoutes = require("./Routes/Formulario_Estudiante");
 const steamRoutes = require("./Routes/Steam_vistas");
 const partidaRoutes = require("./Routes/Partida");
 const statsRoutes = require("./Routes/Stats");
+const logroRoutes = require("./Routes/Logro_Jugador");
 
 // Crear el servidor
 const app = express();
@@ -30,6 +31,7 @@ app.use("/estudiante", estudianteRoutes);
 app.use("/steam", steamRoutes);
 app.use("/partida", partidaRoutes);
 app.use("/stats", statsRoutes);
+app.use("/logros", logroRoutes);
 
 //Configurar la visualización de plantillas
 app.engine('html',require('ejs').renderFile);

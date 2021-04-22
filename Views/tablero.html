@@ -63,13 +63,16 @@ Ultima modificación: 15/04/2021
             <br><br>
             <div class="boton">
                 <button id="cerrar" class="btn btn-outline-danger">Cerrar sesión</button>
+                <button id="redireccionar" class="btn btn-outline-info">Dashboard</button>
             </div>
         <script type="text/javascript">
             document.getElementById("cerrar").onclick = function () {
                 location.href = "http://localhost:8080/steam/loginsteam";
             };
+
+            document.getElementById("redireccionar").onclick = function () {
+                location.href = "http://localhost:8080/steam/dashboard";
+            };
         </script>
-        <!--Importamos archivo Javascript -->
-        <script src="script-tablero.js"></script>
     </body>
 </html>

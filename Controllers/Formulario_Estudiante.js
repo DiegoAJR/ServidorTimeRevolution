@@ -7,8 +7,10 @@
 
 const Sequelize = require("sequelize");
 const sequelize = require("../Util/database");
-const Formulario_Estudiante = sequelize.models.Formulario_Estudiante
+const Formulario_Estudiante = sequelize.models.Formulario_Estudiante;
+const Jugador_Usuario = sequelize.models.Jugador_Usuario;
 const path = require("path");
+const archivoAlert = require("../Public/js/Login");
 
 
 exports.getAgregarUsuario = (req,res) =>{
@@ -16,7 +18,7 @@ exports.getAgregarUsuario = (req,res) =>{
 };
 
 exports.postAgregarUsuario = (req,res)=>{
-    console.log(req.body);
+    let busqueda = "SELECT idFormulario FROM Formulario_Estudiante WHERE nickname = '"+req.body.nombreusuario+ "'";
     let area = parseInt(req.body.areausuario);
     Formulario_Estudiante.create({
         nickname:req.body.nombreusuario,
@@ -28,6 +30,14 @@ exports.postAgregarUsuario = (req,res)=>{
         gradoEscolar: req.body.gradousuario,
         estadoMex: req.body.estadousuario,
         AreaSteamIdAreaSteam: area
+    }).then(
+        sequelize.query(busqueda,{
+            type: Sequelize.QueryTypes.SELECT
+    })).then(numero=>{
+        let valor = parseInt(numero.dataValues.idFormulario);
+        Jugador_Usuario.create({
+            FormularioEstudianteIdFormulario: valor
+        })
     }).then(resultado=>res.redirect("/estudiante/confirmacion"))
     .catch(error=>{
         //Alerta de nickname repetido o algo sale mal
@@ -41,6 +51,9 @@ exports.getConfirmacion = (req,res)=>{
 
 exports.getLogin = (req,res) => {
     res.sendFile(path.join(__dirname, "..","views","Login.html"));
+    if(req.query.error == "true") {
+        archivoAlert.Advertencia();
+    }
 }
 
 exports.postLogin = (req,res) =>{
@@ -54,7 +67,7 @@ exports.postLogin = (req,res) =>{
             res.redirect("/estudiante/paginaPrincipal?nickname="+nickname);
         }else{
             //Alerta de usuario incorrecto
-            res.redirect("/estudiante/login");
+            res.redirect("/estudiante/login?error=true");
         }
     })
     

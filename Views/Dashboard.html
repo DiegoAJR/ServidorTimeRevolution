@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--HTML de página de confirmación de agregación de usuario-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/Dashboard.css">
+        <title>Dashboard de Datos</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <br>
+            <br>
+            <header>
+                <h1 class="container titulo">Dashboard de datos</h1>
+            </header>
+            <div class="container texto">
+                <br>
+                <br>
+                <div class="boton">
+                    <button id="cerrar" class="btn btn-outline-danger">Cerrar sesión</button>
+                    <button id="regresar" class="btn btn-outline-info">Registros</button>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById("cerrar").onclick = function () {
+                location.href = "http://localhost:8080/steam/loginsteam";
+            };
+            document.getElementById("regresar").onclick = function () {
+                location.href = "http://localhost:8080/steam/registros";
+            };
+        </script>
+    </body>
+</html>
