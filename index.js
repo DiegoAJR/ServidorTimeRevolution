@@ -20,7 +20,7 @@ const logroRoutes = require("./Routes/Logro_Jugador");
 const app = express();
 
 // Establecer un middleware para configurar la ubicacion de nuestros elementos publicos
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'Public')));
 
 // Middleware para configurar la definicion de un JSON
 app.use(bodyParser.json());
