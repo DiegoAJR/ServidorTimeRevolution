@@ -19,13 +19,13 @@ const sequelize = new Sequelize("TimeRevolutionBD","sa","Password1234$", {
 
 //Cargar modelos
 const modelDefiners = [
-    require("../models/Formulario_Estudiante"), 
-    require("../models/Area_Steam"),
-    require("../models/Jugador_Usuario"),
-    require("../models/Logro"),
-    require("../models/Logro_Jugador"),
-    require("../models/Partida"),
-    require("../models/Stats")
+    require("../Models/Formulario_Estudiante"), 
+    require("../Models/Area_Steam"),
+    require("../Models/Jugador_Usuario"),
+    require("../Models/Logro"),
+    require("../Models/Logro_Jugador"),
+    require("../Models/Partida"),
+    require("../Models/Stats")
 ]
 
 //Vincular el objeto de conexion con los modelos

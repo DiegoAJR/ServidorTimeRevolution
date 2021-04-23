@@ -3,7 +3,7 @@
  */
 
 const express = require("express");
-const formulario_estudianteController = require("../controllers/Formulario_Estudiante");
+const formulario_estudianteController = require("../Controllers/Formulario_Estudiante");
 const router = express.Router();
 
 //Muestra el formulario
