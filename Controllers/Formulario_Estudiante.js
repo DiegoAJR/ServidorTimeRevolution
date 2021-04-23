@@ -12,7 +12,7 @@ const archivoAlert = require("../Public/js/Login");
 
 //Envia el archivo del formulario
 exports.getAgregarUsuario = (req,res) =>{
-    res.sendFile(path.join(__dirname,"..","views","Formularioeq3.html"));
+    res.sendFile(path.join(__dirname,"..","Views","Formularioeq3.html"));
 };
 
 //Agrega usuario
@@ -46,12 +46,12 @@ exports.postAgregarUsuario = (req,res)=>{
 
 //Envia archivo de confirmacion
 exports.getConfirmacion = (req,res)=>{
-    res.sendFile(path.join(__dirname,"..","views","Confirmacion.html"));
+    res.sendFile(path.join(__dirname,"..","Views","Confirmacion.html"));
 }
 
 //Envia archivo de login
 exports.getLogin = (req,res) => {
-    res.sendFile(path.join(__dirname, "..","views","Login.html"));
+    res.sendFile(path.join(__dirname, "..","Views","Login.html"));
     if(req.query.error == "true") {
         archivoAlert.Advertencia();
     }

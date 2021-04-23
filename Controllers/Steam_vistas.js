@@ -21,7 +21,7 @@ exports.postLogin = (req,res) =>{
 
 //Manda el archivo de login especifico de STEAM
 exports.getLogin = (req,res) => {
-    res.sendFile(path.join(__dirname, "..","views","loginsteam.html"));
+    res.sendFile(path.join(__dirname, "..","Views","loginsteam.html"));
 }
 
 //Checa la tabla de Formulario_Estudiante y muestra todos los registros en el tablero
@@ -42,5 +42,5 @@ exports.getRegistros = (req,res)=>{
 
 //Envia el archivo de dashboard
 exports.getDashboard = (req,res) => {
-    res.sendFile(path.join(__dirname, "..","views","Dashboard.html"));
+    res.sendFile(path.join(__dirname, "..","Views","Dashboard.html"));
 }
