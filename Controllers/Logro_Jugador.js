@@ -1,11 +1,14 @@
-/* Controladores de la tabla Steam_vistas
- * Agrega stats del usuario
+/* 
+ * Controlador de la tabla Logro_Jugador
  */
+
+//Imports
 const Sequelize = require("sequelize");
 const sequelize = require("../Util/database");
 const Logro_Jugador = sequelize.models.Logro_Jugador;
 const path = require("path");
 
+//Agrega Logro_Jugador
 exports.postAgregarLogro_Jugador = (req,res)=>{
     let datosunity = req.body;
     Logro_Jugador.create({

@@ -1,4 +1,6 @@
-// Definición del modelo de la tabla Area_Steam
+/*
+ * Definicion de la tabla Area_Steam
+ */
 
 const Sequelize = require("sequelize");
 

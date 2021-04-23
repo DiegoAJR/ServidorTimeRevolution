@@ -1,5 +1,6 @@
-// Definición del modelo de la tabla Area_Steam
-
+/*
+ * Definicion de la tabla Partida
+ */
 const Sequelize = require("sequelize");
 
 const Partida = (sequelize) => {

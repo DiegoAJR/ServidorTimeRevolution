@@ -1,3 +1,8 @@
+/* 
+ * Estilos de la pagina de Dashboard
+ */
+
+ /* Clases */
 .container-fluid {
     background-color: rgb(245, 225, 171);
     height: 100%
@@ -19,6 +24,7 @@
     text-align: center;
 }
 
+/* Tags HTML */
 p {
     margin-bottom: 0;
 }

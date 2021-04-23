@@ -1,15 +1,14 @@
-/* Controladores de la tabla Steam_vistas
- * Agrega usuarios
- * Muestra confirmación
- * Muestra registros
- * Muestra Login
+/* 
+ * Controladores del usuario de STEAM
  */
 
+//Imports
 const Sequelize = require("sequelize");
 const sequelize = require("../Util/database");
 const Formulario_Estudiante = sequelize.models.Formulario_Estudiante
 const path = require("path");
 
+//Verifica que el login de STEAM sea correcto
 exports.postLogin = (req,res) =>{
     let nickname = req.body.loginusuario;
     let contrasena = req.body.logincontrasena;
@@ -20,10 +19,12 @@ exports.postLogin = (req,res) =>{
     }
 }
 
+//Manda el archivo de login especifico de STEAM
 exports.getLogin = (req,res) => {
     res.sendFile(path.join(__dirname, "..","views","loginsteam.html"));
 }
 
+//Checa la tabla de Formulario_Estudiante y muestra todos los registros en el tablero
 exports.getRegistros = (req,res)=>{
     //Query todos los usuario
     Formulario_Estudiante.findAll()
@@ -39,6 +40,7 @@ exports.getRegistros = (req,res)=>{
         });
 };
 
+//Envia el archivo de dashboard
 exports.getDashboard = (req,res) => {
     res.sendFile(path.join(__dirname, "..","views","Dashboard.html"));
 }

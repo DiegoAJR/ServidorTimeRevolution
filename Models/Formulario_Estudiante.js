@@ -1,4 +1,6 @@
-// Definición del modelo de la tabla Formulario_Estudiante
+/*
+ * Definicion de la tabla Formulario_Estudiante
+ */
 
 const Sequelize = require("sequelize");
 
@@ -42,18 +44,7 @@ const Formulario_Estudiante = (sequelize) => {
         estadoMex: {
             type: Sequelize.STRING(40),
             allowNull: false
-        },
-        /*
-        areaSteam: {
-            type: Sequelize.INTEGER,
-            allowNull: false
-            // references: {
-            //     model: Area_Steam,
-            //     key: idArea
-            // },
-            // allowNull: false
         }
-        */
     });
 }
 

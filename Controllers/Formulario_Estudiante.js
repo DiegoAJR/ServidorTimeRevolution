@@ -1,10 +1,8 @@
-/* Controladores de la tabla Formulario_Estudiante
- * Agrega usuarios
- * Muestra confirmación
- * Muestra registros
- * Muestra Login
+/* 
+ * Controladores de la tabla Formulario_Estudiante
  */
 
+//Imports
 const Sequelize = require("sequelize");
 const sequelize = require("../Util/database");
 const Formulario_Estudiante = sequelize.models.Formulario_Estudiante;
@@ -12,11 +10,12 @@ const Jugador_Usuario = sequelize.models.Jugador_Usuario;
 const path = require("path");
 const archivoAlert = require("../Public/js/Login");
 
-
+//Envia el archivo del formulario
 exports.getAgregarUsuario = (req,res) =>{
     res.sendFile(path.join(__dirname,"..","views","Formularioeq3.html"));
 };
 
+//Agrega usuario
 exports.postAgregarUsuario = (req,res)=>{
     let busqueda = "SELECT idFormulario FROM Formulario_Estudiante WHERE nickname = '"+req.body.nombreusuario+ "'";
     let area = parseInt(req.body.areausuario);
@@ -45,10 +44,12 @@ exports.postAgregarUsuario = (req,res)=>{
     });
 };
 
+//Envia archivo de confirmacion
 exports.getConfirmacion = (req,res)=>{
     res.sendFile(path.join(__dirname,"..","views","Confirmacion.html"));
 }
 
+//Envia archivo de login
 exports.getLogin = (req,res) => {
     res.sendFile(path.join(__dirname, "..","views","Login.html"));
     if(req.query.error == "true") {
@@ -56,6 +57,7 @@ exports.getLogin = (req,res) => {
     }
 }
 
+//Checa los datos de login con la base de datos
 exports.postLogin = (req,res) =>{
     let nickname = req.body.loginusuario;
     let contrasena = req.body.logincontrasena;
@@ -74,6 +76,7 @@ exports.postLogin = (req,res) =>{
     .catch(err=>console.log(err))
 }
 
+//Hace queries en la base de datos y hace render de la pagina principal
 exports.getPaginaPrincipal = (req,res) => {
     //Query todos los usuario
     let nickname = req.query.nickname

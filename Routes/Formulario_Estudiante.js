@@ -1,7 +1,5 @@
-/* Rutas de la tabla Formulario_Estudiante
- * Agrega usuarios
- * Muestra confirmación
- * Muestra registros
+/* 
+ * Rutas de la tabla Formulario_Estudiante
  */
 
 const express = require("express");

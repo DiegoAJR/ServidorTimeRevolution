@@ -1,11 +1,14 @@
-/* Controladores de la tabla Steam_vistas
- * Agrega stats del usuario
+/* 
+ * Controladores de la tabla Partida
  */
+
+//Imports
 const Sequelize = require("sequelize");
 const sequelize = require("../Util/database");
 const Partida = sequelize.models.Partida
 const path = require("path");
 
+//Agrega partida
 exports.postAgregarPartida = (req,res)=>{
     let datosunity = req.body;
     Partida.create({

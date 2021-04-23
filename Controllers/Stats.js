@@ -1,11 +1,14 @@
-/* Controladores de la tabla Steam_vistas
- * Agrega stats del usuario
+/* 
+ * Controlador de la tabla Stats
  */
+
+//Imports
 const Sequelize = require("sequelize");
 const sequelize = require("../Util/database");
 const Stats = sequelize.models.Stats
 const path = require("path");
 
+//Agrega stats
 exports.postAgregarStats = (req,res)=>{
     let datosunity = req.body;
     Stats.create({

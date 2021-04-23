@@ -1,5 +1,6 @@
-// Definición del modelo de la tabla Area_Steam
-
+/*
+ * Definicion de la tabla Logro
+ */
 const Sequelize = require("sequelize");
 
 const Logro = (sequelize) => {
