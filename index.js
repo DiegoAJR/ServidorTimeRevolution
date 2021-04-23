@@ -8,7 +8,7 @@ const path = require('path');
 const express = require('express');
 
 // Traer la conexion de la base de datos
-const sequelize = require("./util/database");
+const sequelize = require("./Util/database");
 // Traer las rutas
 const estudianteRoutes = require("./Routes/Formulario_Estudiante");
 const steamRoutes = require("./Routes/Steam_vistas");
