@@ -58,8 +58,12 @@
             <p>Conoce a STEAM en su <a href="https://movimientosteam.org/">pagina web</a> </p>
         </footer>
         <!--Importamos el archivo Javascript -->
+        <%warnings.forEach((warning)=>{%>
+            <script>
+                alert("Usuario o contraseña incorrectos");
+            </script>
+        <%})%>
         <script src="/js/FormularioJS.js"></script>
-        <script src="/js/Login.js"></script>
         <script>
             document.getElementById("redirect").onclick = function () {
                 location.href = "/estudiante/agregarJugador";

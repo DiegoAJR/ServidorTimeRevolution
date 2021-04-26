@@ -51,9 +51,16 @@ exports.getConfirmacion = (req,res)=>{
 
 //Envia archivo de login
 exports.getLogin = (req,res) => {
-    res.sendFile(path.join(__dirname, "..","Views","Login.html"));
     if(req.query.error == "true") {
-        archivoAlert.Advertencia();
+        let warning = [1]
+        res.render("Login.html", {
+            warnings: warning
+        })
+    } else {
+        let warning = []
+        res.render("Login.html", {
+            warnings: warning
+        });
     }
 }
 

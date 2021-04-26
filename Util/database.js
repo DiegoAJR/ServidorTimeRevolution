@@ -36,5 +36,31 @@ for(const modelDefiner of modelDefiners){
 //Construir relaciones
 applyRelations(sequelize);
 
+const Area_Steam = sequelize.models.Area_Steam;
+
+Area_Steam.create({
+    nombre: "Ciencia"
+}).then(
+    Area_Steam.create({
+        nombre: "Tecnologia"
+    })
+).then(
+    Area_Steam.create({
+        nombre: "Ingenieria"
+    })
+).then(
+    Area_Steam.create({
+        nombre: "Matematicas"
+    })
+).then(
+    Area_Steam.create({
+        nombre: "Arte"
+    })
+).then(
+    Area_Steam.create({
+        nombre: "Ninguna"
+    })
+);
+
 //Exportando el objeto sequelize
 module.exports = sequelize;

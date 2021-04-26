@@ -1,3 +1,5 @@
+const Sequelize = require("sequelize");
+
 //Funcion que recibe el objeto de conexion
 function applyRelations(sequelize) {
     console.log(sequelize.models);
