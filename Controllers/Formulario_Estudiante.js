@@ -12,7 +12,17 @@ const archivoAlert = require("../Public/js/Login");
 
 //Envia el archivo del formulario
 exports.getAgregarUsuario = (req,res) =>{
-    res.sendFile(path.join(__dirname,"..","Views","Formularioeq3.html"));
+    if(req.query.error == "true") {
+        let warning = [1]
+        res.render("Formularioeq3.html", {
+            warnings: warning
+        })
+    } else {
+        let warning = []
+        res.render("Formularioeq3.html", {
+            warnings: warning
+        });
+    }
 };
 
 //Agrega usuario
@@ -40,7 +50,7 @@ exports.postAgregarUsuario = (req,res)=>{
     }).then(resultado=>res.redirect("/estudiante/confirmacion"))
     .catch(error=>{
         //Alerta de nickname repetido o algo sale mal
-        res.redirect("/estudiante/agregarJugador");
+        res.redirect("/estudiante/agregarJugador?error=true");
     });
 };
 

@@ -60,8 +60,10 @@
         <!--Importamos el archivo Javascript -->
         <%warnings.forEach((warning)=>{%>
             <script>
-                alert("Usuario o contraseña incorrectos");
-            </script>
+                document.addEventListener("DOMContentLoaded", function(event) {
+                    alert("Usuario o contraseña incorrectos")
+                });
+              </script>
         <%})%>
         <script src="/js/FormularioJS.js"></script>
         <script>

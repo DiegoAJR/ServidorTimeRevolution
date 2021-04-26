@@ -179,6 +179,13 @@ Ultima modificación: 15/04/2021
         <p>Conoce a STEAM en su <a href="https://movimientosteam.org/">pagina web</a> </p>
     </footer>
     <!--Importamos el archivo Javascript -->
+    <%warnings.forEach((warning)=>{%>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                alert("Nickname no disponible")
+            });
+          </script>
+    <%})%>
     <script src="/js/FormularioJS.js"></script>
     </body>
 </html>
