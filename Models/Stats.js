@@ -11,17 +11,25 @@ const Stats = (sequelize) => {
             allowNull: false,
             primaryKey: true
         },
-        tiempoBase: {
-            type: Sequelize.STRING(50),
-            allowNull: false
+        intentosCuestionario1: {
+            type: Sequelize.INTEGER,
+            allowNull: true
         },
-        tiempoRecord: {
-            type: Sequelize.STRING(50),
-            allowNull: false
+        intentosCuestionario2: {
+            type: Sequelize.INTEGER,
+            allowNull: true
         },
-        nuevoRecord: {
-            type: Sequelize.STRING(50),
-            allowNull: false
+        intentosCuestionario3: {
+            type: Sequelize.INTEGER,
+            allowNull: true
+        },
+        tiempoCoreDrop: {
+            type: Sequelize.INTEGER,
+            allowNull: true
+        },
+        tiempoEnergySnake: {
+            type: Sequelize.INTEGER,
+            allowNull: true
         }
     });
 }

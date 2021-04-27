@@ -15,6 +15,10 @@ const Partida = (sequelize) => {
             type: Sequelize.INTEGER,
             allowNull: false
         },
+        tiempo: {
+            type: Sequelize.INTEGER,
+            allowNull: false
+        }
     });
 }
 

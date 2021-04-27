@@ -7,6 +7,7 @@ const Sequelize = require("sequelize");
 const sequelize = require("../Util/database");
 const Formulario_Estudiante = sequelize.models.Formulario_Estudiante;
 const Jugador_Usuario = sequelize.models.Jugador_Usuario;
+const Stats = sequelize.models.Stats
 const path = require("path");
 const archivoAlert = require("../Public/js/Login");
 
@@ -46,7 +47,10 @@ exports.postAgregarUsuario = (req,res)=>{
         let valor = parseInt(numero.dataValues.idFormulario);
         Jugador_Usuario.create({
             FormularioEstudianteIdFormulario: valor
-        })
+        });
+        Stats.create({
+            JugadorUsuarioIdJugadorUsuario: valor
+        });
     }).then(resultado=>res.redirect("/estudiante/confirmacion"))
     .catch(error=>{
         //Alerta de nickname repetido o algo sale mal

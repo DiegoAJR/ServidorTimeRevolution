@@ -26,10 +26,7 @@ function applyRelations(sequelize) {
     Partida.belongsTo(Jugador_Usuario/*, {as: "areaSteam"}*/);
     Jugador_Usuario.hasMany(Partida/*, {as: "areaSteam"}*/);
 
-    Stats.belongsTo(Partida);
-    //Partida.belongsTo(Stats);
-
-
+    Stats.belongsTo(Jugador_Usuario);
 }
 
 module.exports = {applyRelations};
