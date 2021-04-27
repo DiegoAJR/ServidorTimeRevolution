@@ -21,8 +21,11 @@ router.get("/login", formulario_estudianteController.getLogin);
 //Obtener los datos de LOGIN
 router.post("/login",formulario_estudianteController.postLogin);
 
-// Mostrar la página principal
-router.get('/paginaPrincipal',formulario_estudianteController.getPaginaPrincipal);
+//Mostrar la página principal
+router.get("/paginaPrincipal",formulario_estudianteController.getPaginaPrincipal);
+
+//Verifica el login mandado de Unity
+router.post("/verificarLogin", formulario_estudianteController.postVerificarLoginUnity);
 
 
 module.exports = router;

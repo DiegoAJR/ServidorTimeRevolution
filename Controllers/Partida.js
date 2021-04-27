@@ -10,13 +10,23 @@ const path = require("path");
 
 //Agrega partida
 exports.postAgregarPartida = (req,res)=>{
-    let datosunity = req.body;
-    Partida.create({
-        nivel: datosunity.nivel,
-        JugadorUsuarioIdJugadorUsuario: datosunity.JugadorUsuarioIdJugadorUsuario
-    }).then(resultado=>res.send("Partida agregada"))
+    let datos0 = req.body.datosJSON;
+    let datos = JSON.parse(datos0);
+
+    let user = datos.usuario;
+    let numNivel = datos.nivel;
+    let busqueda = "SELECT idFormulario FROM Formulario_Estudiante WHERE nickname = '"+user+"'";
+    sequelize.query(busqueda,{
+        type: Sequelize.QueryTypes.SELECT
+    }).then(resultado=>{
+        let numId = parseInt(resultado[0].idFormulario);
+        let numNivel2 = parseInt(numNivel);
+        Partida.create({
+            nivel: numNivel2,
+            JugadorUsuarioIdJugadorUsuario: numId
+        })
+    }).then(res.send("Exito"))
     .catch(error=>{
-        //Alerta de nickname repetido o algo sale mal
-        res.send("Surgió un error al agregar a la tabla Stats");
+        console.log(error);
     });
 };

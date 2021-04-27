@@ -126,3 +126,23 @@ exports.getPaginaPrincipal = (req,res) => {
                 });
         });
 };
+
+exports.postVerificarLoginUnity = (req,res) => {
+    let datos0 = req.body.datosJSON;
+    let datos = JSON.parse(datos0);
+
+    let user = datos.usuario;
+    let password = datos.contrasena;
+    let busqueda = "SELECT nickname FROM Formulario_Estudiante WHERE nickname = '"+user+ "' and contrasena = '"+password+"'";
+    sequelize.query(busqueda,{
+        type: Sequelize.QueryTypes.SELECT
+    }).then(alumnos=>{
+        if(alumnos.length == 1){
+            res.send("Acceso concedido");
+        }else{
+            res.send("Acceso denegado. Usuario o contraseña incorrectos");
+        }
+    })
+    
+    .catch(err=>console.log(err))
+}
