@@ -54,6 +54,7 @@ exports.postAgregarUsuario = (req,res)=>{
     }).then(resultado=>res.redirect("/estudiante/confirmacion"))
     .catch(error=>{
         //Alerta de nickname repetido o algo sale mal
+        console.log(error);
         res.redirect("/estudiante/agregarJugador?error=true");
     });
 };

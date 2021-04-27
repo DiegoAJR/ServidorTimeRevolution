@@ -36,7 +36,7 @@ for(const modelDefiner of modelDefiners){
 //Construir relaciones
 applyRelations(sequelize);
 
-/*
+
 const Logro = sequelize.models.Logro
 
 Logro.create({
@@ -95,7 +95,7 @@ Area_Steam.create({
         nombre: "Ninguna"
     })
 );
-*/
+
 
 //Exportando el objeto sequelize
 module.exports = sequelize;
