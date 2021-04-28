@@ -35,7 +35,7 @@ app.use("/logros", logroRoutes);
 
 //Configurar la visualización de plantillas
 app.engine('html',require('ejs').renderFile);
-app.set('view engine','ejs');
+app.set('View engine','ejs');
 
 
 let puerto = 8080;
