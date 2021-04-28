@@ -40,11 +40,21 @@ exports.postAgregarStats = (req,res)=>{
         })}else if(campo == "tiempoEnergySnake"){
             Stats.findByPk(numId)
             .then(registro => {
+                if(parseInt(registro.tiempoEnergySnake) > stats) {
                 registro.tiempoEnergySnake = stats
                 return registro && registro.save();
+                } else if(parseInt(registro.tiempoEnergySnake) < stats) {
+                    //pass
+                }
         })}else if(campo == "tiempoCoreDrop"){
             Stats.findByPk(numId)
             .then(registro => {
+                if(parseInt(registro.tiempoCoreDrop) > stats) {
+                    registro.tiempoCoreDrop = stats
+                    return registro && registro.save();
+                    } else if(parseInt(registro.tiempoCoreDrop) < stats) {
+                        //pass
+                    }
                 registro.tiempoCoreDrop = stats
                 return registro && registro.save();
         })}
