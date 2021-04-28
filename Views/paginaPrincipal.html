@@ -51,17 +51,21 @@
                 <table class="table table-hover table-bordered table-striped" style="text-align: center;" id="tabla">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">Tiempo Record</td>
-                            <th scope="col">Tiempo Base</td>
-                            <th scope="col">Nivel</td>
+                            <th scope="col">Intentos puzzle nivel 1</td>
+                            <th scope="col">Intentos puzzle nivel 2</td>
+                            <th scope="col">Intentos puzzle nivel 3</td>
+                            <th scope="col">Mejor tiempo CoreDrop</td>
+                            <th scope="col">Mejor tiempo EnergySnake</td>
                         </tr>
                     </thead>
                     <tbody>
                         <%datosstats.forEach((stat)=>{%>
                         <tr>
-                            <td><%=stat.tiempoRecord%></td>
-                            <td><%=stat.tiempoBase%></td>
-                            <td><%=stat.nivel%></td>
+                            <td><%=stat.intentosCuestionario1%></td>
+                            <td><%=stat.intentosCuestionario2%></td>
+                            <td><%=stat.intentosCuestionario3%></td>
+                            <td><%=stat.tiempoCoreDrop%></td>
+                            <td><%=stat.tiempoEnergySnake%></td>
                         </tr>
                         <%});%>
                     </tbody>

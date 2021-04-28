@@ -14,20 +14,41 @@ exports.postAgregarStats = (req,res)=>{
     let datos = JSON.parse(datos0);
 
     let user = datos.usuario;
-    let  = datos.nivel;
-    let tiempillo = datos.tiempo;
+    let campo = datos.campo;
+    let stat = datos.stat;
     let busqueda = "SELECT idFormulario FROM Formulario_Estudiante WHERE nickname = '"+user+"'";
     sequelize.query(busqueda,{
         type: Sequelize.QueryTypes.SELECT
     }).then(resultado=>{
         let numId = parseInt(resultado[0].idFormulario);
-        let numNivel2 = parseInt(numNivel);
-        Partida.create({
-            nivel: numNivel2,
-            tiempo: tiempillo,
-            JugadorUsuarioIdJugadorUsuario: numId
-        })
-    }).then(res.send("Exito"))
+        let stats = parseInt(stat);
+        if(campo == "intentosCuestionario1"){
+            Stats.findByPk(numId)
+            .then(registro => {
+                registro.intentosCuestionario1 = stats
+                return registro && registro.save();
+        })}else if(campo == "intentosCuestionario2"){
+            Stats.findByPk(numId)
+            .then(registro => {
+                registro.intentosCuestionario2 = stats
+                return registro && registro.save();
+        })}else if(campo == "intentosCuestionario3"){
+            Stats.findByPk(numId)
+            .then(registro => {
+                registro.intentosCuestionario3 = stats
+                return registro && registro.save();
+        })}else if(campo == "tiempoEnergySnake"){
+            Stats.findByPk(numId)
+            .then(registro => {
+                registro.tiempoEnergySnake = stats
+                return registro && registro.save();
+        })}else if(campo == "tiempoCoreDrop"){
+            Stats.findByPk(numId)
+            .then(registro => {
+                registro.tiempoCoreDrop = stats
+                return registro && registro.save();
+        })}
+        }).then(res.send("Nueva Stat Holy Molly"))
     .catch(error=>{
         console.log(error);
     });

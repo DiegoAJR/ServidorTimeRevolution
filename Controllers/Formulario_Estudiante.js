@@ -107,9 +107,9 @@ exports.getPaginaPrincipal = (req,res) => {
     let logros = (`select j.puntaje, j.nombre, j.descripcion 
     from Formulario_Estudiante f, Jugador_Usuario u, Logro_Jugador l, Logro j 
     where l.JugadorUsuarioIdJugadorUsuario = u.idJugadorUsuario and u.FormularioEstudianteIdFormulario = f.idFormulario and j.idLogro = l.LogroIdLogro and f.nickname = '`+ nickname +`'`);
-    let stats = (`select s.tiempoRecord, s.tiempoBase, p.nivel
-    from Formulario_Estudiante f, Jugador_Usuario u, Partida p, [dbo].[Stats] s
-    where p.JugadorUsuarioIdJugadorUsuario = u.idJugadorUsuario and s.PartidaIdPartida = p.idPartida and u.FormularioEstudianteIdFormulario = f.idFormulario and f.nickname = '`+nickname+`'`);
+    let stats = (`select s.intentosCuestionario1, s.intentosCuestionario2, s.intentosCuestionario3, s.tiempoCoreDrop, s.tiempoEnergySnake
+    from Formulario_Estudiante f, Jugador_Usuario u, [dbo].[Stats] s
+    where s.idStat = u.idJugadorUsuario and u.FormularioEstudianteIdFormulario = f.idFormulario and f.nickname = '`+nickname+`'`);
     sequelize.query(logros,{
         type: Sequelize.QueryTypes.SELECT
     }).then(registros=>{
