@@ -1,3 +1,11 @@
+<!-- 
+Pagina principal Juego: Time revolution para STEAM
+Código realizado por:
+Diego Alejandro Juárez Ruiz - A01379566
+Luis Enrique Zamarripa Marín - A01379918
+Ultima modificación: 20/04/2021
+- Código HTML que muestra la pagina principal de usuario
+-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -72,7 +80,8 @@
                 </table>
                 <br>
                 <div class="boton">
-                    <button id="download" class="btn btn-outline-dark">Descargar Time Revolution</button>
+                    <button id="downloadW" class="btn btn-outline-info">Descargar Time Revolution Windows</button>
+                    <button id="downloadM" class="btn btn-outline-info">Descargar Time Revolution Mac OS</button>
                     <button id="cerrar" class="btn btn-outline-danger">Cerrar sesión</button>
                 </div>
                 <br>
@@ -80,7 +89,10 @@
             <br>
         </div>
         <script type="text/javascript">
-            document.getElementById("download").onclick = function () {
+            document.getElementById("downloadW").onclick = function () {
+                console.log("Hello World!");
+            };
+            document.getElementById("downloadM").onclick = function () {
                 console.log("Hello World!");
             };
         </script>
