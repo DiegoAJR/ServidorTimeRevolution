@@ -4,6 +4,8 @@ const router = express.Router();
 
 
 //Obtener la pagina de Bienvenida
-router.get("/timerevolution", juegoController.getTimeRevolution);
+router.get("/timeRevolution", juegoController.getTimeRevolution);
+
+router.get("/juegoCompleto",juegoController.getJuegoEjecutable);
 
 module.exports = router;
