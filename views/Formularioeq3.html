@@ -143,9 +143,9 @@ Ultima modificación: 15/04/2021
                     </div>
 
                         <div class="col">
-                            <label for="areausuario">Área de estudios interesado:</label>
+                            <label for="areausuario">Área de estudios interesado*:</label>
                             <br>
-                            <select class="form-select" id="areausuario" aria-label="Area de estudios" name="areausuario">
+                            <select class="form-select" id="areausuario" aria-label="Area de estudios" name="areausuario" required>
                                 <option selected>Seleccionar</option>
                                 <option value="1">Ciencias</option>
                                 <option value="2">Tecnología</option>
@@ -161,6 +161,15 @@ Ultima modificación: 15/04/2021
                         <label>Correo electronico</label>
                         <input type="text" class="form-control" placeholder="Ingrese su correo electronico"
                             id="correousuario" name="correousuario">
+                    </div>
+                    <br>
+                    <p> Conoce nuestro <a href="/estudiante/acuerdo">Acuerdo de privacidad</a> </p>
+                    <br>
+                    <div class="col">
+                    <input class="form-check-input" type="checkbox" value="" id="acuerdodeprivacidad" required>
+                    <label class="form-check-label" for="flexCheckDefault">
+                        He leido y acepto el acuerdo de privacidad*
+                    </label>
                     </div>
                     <br>
                     <!--Botones -->
@@ -184,7 +193,7 @@ Ultima modificación: 15/04/2021
             document.addEventListener("DOMContentLoaded", function(event) {
                 alert("Nickname no disponible")
             });
-          </script>
+        </script>
     <%})%>
     <script src="/js/FormularioJS.js"></script>
     </body>

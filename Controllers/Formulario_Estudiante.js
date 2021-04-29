@@ -64,6 +64,11 @@ exports.getConfirmacion = (req,res)=>{
     res.sendFile(path.join(__dirname,"..","views","Confirmacion.html"));
 }
 
+//Envia archivo de acuerdo de privacidad
+exports.getAcuerdo = (req,res)=>{
+    res.sendFile(path.join(__dirname,"..","views","acuerdopriv.html"));
+}
+
 //Envia archivo de login
 exports.getLogin = (req,res) => {
     if(req.query.error == "true") {

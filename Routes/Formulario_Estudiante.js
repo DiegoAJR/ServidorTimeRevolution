@@ -15,6 +15,9 @@ router.post("/agregarJugador", formulario_estudianteController.postAgregarUsuari
 //Mostrar al usuario el resultado de la transaccion
 router.get("/confirmacion", formulario_estudianteController.getConfirmacion);
 
+//Mostrar al usuario el resultado de la transaccion
+router.get("/acuerdo", formulario_estudianteController.getAcuerdo);
+
 //Muestra la página de Login
 router.get("/login", formulario_estudianteController.getLogin);
 
