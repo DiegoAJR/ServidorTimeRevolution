@@ -61,7 +61,7 @@ exports.postAgregarUsuario = (req,res)=>{
 
 //Envia archivo de confirmacion
 exports.getConfirmacion = (req,res)=>{
-    res.sendFile(path.join(__dirname,"..","Views","Confirmacion.html"));
+    res.sendFile(path.join(__dirname,"..","views","Confirmacion.html"));
 }
 
 //Envia archivo de login
