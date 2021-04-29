@@ -33,9 +33,9 @@ app.use("/partida", partidaRoutes);
 app.use("/stats", statsRoutes);
 app.use("/logros", logroRoutes);
 
+app.set('views', path.join(__dirname, 'views'));
 //Configurar la visualización de plantillas
 app.engine('html',require('ejs').renderFile);
-app.set('views', __dirname + '/views');
 app.set('view engine','ejs');
 
 
