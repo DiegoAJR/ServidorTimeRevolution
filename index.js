@@ -15,6 +15,7 @@ const steamRoutes = require("./Routes/Steam_vistas");
 const partidaRoutes = require("./Routes/Partida");
 const statsRoutes = require("./Routes/Stats");
 const logroRoutes = require("./Routes/Logro_Jugador");
+const juegoRoutes = require("./Routes/Juego");
 
 // Crear el servidor
 const app = express();
@@ -32,6 +33,8 @@ app.use("/steam", steamRoutes);
 app.use("/partida", partidaRoutes);
 app.use("/stats", statsRoutes);
 app.use("/logros", logroRoutes);
+app.use("/juego", juegoRoutes);
+
 
 app.set('views', path.join(__dirname, 'views'));
 //Configurar la visualización de plantillas

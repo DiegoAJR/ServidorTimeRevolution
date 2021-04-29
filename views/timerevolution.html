@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--HTML de página de confirmación de agregación de usuario-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/timerevolution.css">
+        <title>Time Revolution</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <br>
+            <header class="container">
+                <h1 class="titulo">Time Revoution</h1>
+            </header>
+            <br>
+            <div class="container" style="background-image: url('/images/fondo.png');" >
+                <br><br><br>
+                <p>
+                    Time Revolution es un juego con el objetivo de incentivar las competencias STEAM y
+                    contar una historia que toca temas acerca de las áreas STEAM. Ponte a prueba contestando los puzzles
+                    y mostrando tus habilidades sobre datos de cienca, tecnología, arte, ingeniería y matemáticas. Juega los puzzles para 
+                    aprender de como fue el pasado y como puede ser nuestro futuro.
+                </p>
+                <br><br><br>
+            </div>
+            <br>
+            <div class="container" style="background-image: url('/images/fondoPasado.jpg');">
+                <br>
+                <h1>¿De que trata Time Revolution?</h1>
+                <br>
+                <p>
+                    Time Revolution se ambienta en la Primer Revolution Industrial, nuestro protagonista, Jacob Smith, recibe una 
+                    carta que lo invita a entrevistar al invertor de la maquina de vapor, Thomas Sabery.
+                    Jacob emprenderá un viaje a lo desconocido cuando, en su camino a su entrevista sea transportado a un futuro más allá del que conocemos.
+                    Ahí aprenderá y mostrará sus habilidades con la ayuda de doctoras, ingenieros y cientificos para superar los desafios que se le pongan encima, 
+                    regresar a casa y revolucionar su propio tiempo. 
+                </p>
+                <br>
+                <p>
+                    ¿Puedes emprender semejante aventura?
+                </p>
+                <br><br>
+            </div>
+            <br>
+            <div class="container" style="background-image: url('/images/fondoFuturo.jpg');">
+                <br>
+                <h1>¿Cómo puedo entrar al juego?</h1>
+                <br>
+                <p>
+                    ¡Es muy sencillo, solo tienes que registrarte como jugador, entrar a tu perfil, descargar el juego y podrás embarcarte en la revolución del tiempo!.
+                    ¡Si ya tienes una cuenta solo incia sesión!
+                </p>
+                <br>
+            </div>
+            <br><br>
+            <div class="boton">
+                <button id="registro" class="btn btn-info">Registro</button>
+                <button id="login" class="btn btn-danger">Inciar sesión</button>
+            </div>
+            <br>
+            <br>
+        </div>
+        <footer>
+            <p id="foot">Conoce a STEAM en su <a href="https://movimientosteam.org/">pagina web</a> </p>
+        </footer>
+    <script type="text/javascript">
+        document.getElementById("registro").onclick = function () {
+            location.href = "/estudiante/agregarJugador";
+        };
+        document.getElementById("login").onclick = function () {
+            location.href = "/estudiante/login";
+        };
+    </script>
+    </body>
+</html>

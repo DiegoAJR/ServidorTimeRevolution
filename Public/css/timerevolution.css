@@ -1,0 +1,58 @@
+/* 
+ * Estilos de la pagina de De timeRevolution
+ */
+
+ /* Clases */
+.container-fluid {
+    background-color: rgb(245, 225, 171);
+}
+
+.container {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+
+.titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+.boton {
+    text-align: center;
+}
+
+/* Tags HTML */
+p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: white;
+}
+
+header{
+    background-color:indianred;
+}
+
+footer
+{
+    background-color: black;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+#foot{
+    font-size: 1rem;
+}
