@@ -39,8 +39,3 @@ exports.getRegistros = (req,res)=>{
             });
         });
 };
-
-//Envia el archivo de dashboard
-exports.getDashboard = (req,res) => {
-    res.sendFile(path.join(__dirname, "..","views","Dashboard.html"));
-}
