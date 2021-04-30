@@ -9,7 +9,6 @@ const Formulario_Estudiante = sequelize.models.Formulario_Estudiante;
 const Jugador_Usuario = sequelize.models.Jugador_Usuario;
 const Stats = sequelize.models.Stats
 const path = require("path");
-const archivoAlert = require("../Public/js/Login");
 
 //Envia el archivo del formulario
 exports.getAgregarUsuario = (req,res) =>{
