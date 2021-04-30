@@ -51,7 +51,7 @@ Logro.create({
     })
 ).then(
     Logro.create({
-        nombre: "Desubriendo el Futuro",
+        nombre: "Descubriendo el Futuro",
         descripcion: "Terminaste el Nivel 3",
         puntaje: 100
     })
