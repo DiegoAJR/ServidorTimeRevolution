@@ -1,4 +1,9 @@
-// Archivo index del servidor del juego Time Revolution
+/*
+ * Archivo index integrador de cada parte de nuestro servidor
+ * Creadores del servidor en su totalidad:
+ * A01379918 - Luis Enrique Zamarripa Marin
+ * A01379566 - Diego Alejandro Juarez Ruiz
+ */
 
 // Biblioteca para definir lo que es un JSON
 const bodyParser = require('body-parser');

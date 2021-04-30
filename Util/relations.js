@@ -1,3 +1,8 @@
+/* 
+ * Especificacion de las relaciones
+ */
+
+//Imports
 const Sequelize = require("sequelize");
 
 //Funcion que recibe el objeto de conexion
@@ -11,20 +16,16 @@ function applyRelations(sequelize) {
     const Partida = sequelize.models.Partida;
     const Stats = sequelize.models.Stats;
 
-    //Relacion 1:N
-    //Un estudiante tiene un area
-    Formulario_Estudiante.belongsTo(Area_Steam/*, {as: "areaSteam"}*/);
-    //Un area puede tener varios estudiantes
-    Area_Steam.hasMany(Formulario_Estudiante/*, {as: "areaSteam"}*/);
+    Formulario_Estudiante.belongsTo(Area_Steam);
+    Area_Steam.hasMany(Formulario_Estudiante);
 
-    //Jugador_Usuario.belongsTo(Formulario_Estudiante);
     Jugador_Usuario.belongsTo(Formulario_Estudiante);
 
     Jugador_Usuario.belongsToMany(Logro, {through: "Logro_Jugador"});
     Logro.belongsToMany(Jugador_Usuario, {through: "Logro_Jugador"});
 
-    Partida.belongsTo(Jugador_Usuario/*, {as: "areaSteam"}*/);
-    Jugador_Usuario.hasMany(Partida/*, {as: "areaSteam"}*/);
+    Partida.belongsTo(Jugador_Usuario);
+    Jugador_Usuario.hasMany(Partida);
 
     Stats.belongsTo(Jugador_Usuario);
 }

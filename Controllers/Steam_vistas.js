@@ -33,7 +33,6 @@ exports.getRegistros = (req,res)=>{
             registros.forEach(registro=>{
                 data.push(registro.dataValues);
             });
-            console.log(data);
             res.render("tablero.html",{
                 personas: data,
             });

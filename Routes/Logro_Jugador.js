@@ -1,3 +1,8 @@
+/* 
+ * Rutas de la tabla Logro_Jugador
+ */
+
+//Imports
 const express = require("express");
 const logro_jugadorController = require("../Controllers/Logro_Jugador");
 const router = express.Router();

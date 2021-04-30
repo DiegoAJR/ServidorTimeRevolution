@@ -1,3 +1,8 @@
+/* 
+ * Rutas de la tabla Stats
+ */
+
+//Imports
 const express = require("express");
 const statsController = require("../Controllers/Stats");
 const router = express.Router();

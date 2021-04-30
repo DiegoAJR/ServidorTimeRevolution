@@ -1,5 +1,5 @@
 /* 
- * Estilos de la pagina de De timeRevolution
+ * Estilos de la pagina de De Time Revolution
  */
 
  /* Clases */
@@ -53,6 +53,8 @@ footer
     color: white;
     position: relative;
 }
+
+/* ID */
 #foot{
     font-size: 1rem;
 }

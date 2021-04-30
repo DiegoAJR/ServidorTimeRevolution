@@ -1,3 +1,8 @@
+/* 
+ * Rutas para el usuario de STEAM
+ */
+
+//Imports
 const express = require("express");
 const steam_vistasController = require("../Controllers/Steam_vistas");
 const router = express.Router();

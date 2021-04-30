@@ -1,3 +1,8 @@
+/* 
+ * Rutas de la tabla Partida
+ */
+
+//Imports
 const express = require("express");
 const partidaController = require("../Controllers/Partida");
 const router = express.Router();

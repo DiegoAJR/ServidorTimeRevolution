@@ -1,5 +1,10 @@
-//Configuracion de Sequelize para conexión de BD
+/* 
+ * Conexion a la Base de Datos
+ * Definicion de modelos y relaciones
+ */
 
+
+//Configuracion de Sequelize para conexión de BD
 const Sequelize = require("sequelize");
 const {applyRelations} = require("./relations")
 
